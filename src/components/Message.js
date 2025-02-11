@@ -3,13 +3,13 @@ import React from 'react';
 const Message = ({ onNext }) => {
   return (
     <div className="message-container">
-      <h2>En vrai Luku ... </h2>
-      <p>J'aime bien ton cul et ta vibe (je peux pas mieux faire comme déclaration) </p>
+      <h2>Bonheur, joie, santé et beaucoup de moula !! </h2>
       <div className="images">
   <img src="/assets/Luku.JPG" alt="Luku au gala" className="luku-image" />
+  <p>P.S : I really like your vibe and your ass </p>
 </div>
       <button className="next-button" onClick={onNext}>
-        Pas moi pineapple
+        Moi aussi pineapple
       </button>
     </div>
   );
