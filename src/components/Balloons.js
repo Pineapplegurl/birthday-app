@@ -9,10 +9,8 @@ const Ballons = ({ onComplete }) => {
     if (!clickedBalloons.includes(index)) {
       setClickedBalloons([...clickedBalloons, index]);
     }
-
-    // Si tous les ballons ont été cliqués, on passe à l'étape suivante
     if (clickedBalloons.length + 1 === balloons.length) {
-      setTimeout(onComplete, 1000); // Petite pause avant de passer à l'étape suivante
+      setTimeout(onComplete, 1000); 
     }
   };
 

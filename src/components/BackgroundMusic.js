@@ -6,7 +6,7 @@ const BackgroundMusic = () => {
 
   const handleToggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted; // Alterne entre muet et actif
+      audioRef.current.muted = !isMuted; 
       setIsMuted(!isMuted);
     }
   };
