@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+/* Fond général */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e6f7ff; /* Bleu pastel */
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.animation-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #e6f7ff; /* Bleu pastel */
 }
 
-.App-link {
-  color: #61dafb;
+/* Conteneur principal */
+
+.balloons-container {
+  text-align: center;
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
+.balloons {
+  display: flex; /* Arrange les ballons horizontalement */
+  justify-content: center; /* Centre les ballons horizontalement */
+  align-items: center; /* Aligne les ballons verticalement */
+  gap: 20px; /* Ajoute un espace entre les ballons */
+}
+
+.balloon {
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.message-container,
+.download-container {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Boutons */
+button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff9f68;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff7643;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.luku-image {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.balloons {
+  display: flex; /* Arrange les ballons horizontalement */
+  justify-content: center; /* Centre les ballons horizontalement */
+  align-items: center; /* Aligne les ballons verticalement */
+  gap: 20px; /* Ajoute un espace entre les ballons */
+}
+
+.balloon {
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.balloon-red {
+  background-color: #ffccd5;
+}
+
+.balloon-blue {
+  background-color: #b3e5fc;
+}
+
+.balloon-green {
+  background-color: #d4edda;
+}
+
+.balloon-yellow {
+  background-color: #fff3cd;
+}
+
+.fly-away {
+  transform: translateY(-200%) scale(0.5);
+  opacity: 0;
+}
+
+/* Conteneur du bouton de musique */
+.music-button-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Assure que le bouton est au-dessus de tout */
+}
+
+/* Bouton de musique stylisé */
+.music-button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #ff9f68; /* Orange pastel */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.music-button:hover {
+  background-color: #ff7643; /* Couleur légèrement plus foncée */
+  transform: scale(1.1); /* Légère élévation */
+}
+
+.music-button:active {
+  transform: scale(1);
+}
+
+.download-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.download-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff9f68;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #ff7643;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:active {
+  transform: scale(0.95);
 }

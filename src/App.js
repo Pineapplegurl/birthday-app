@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Animation from './components/Animation';
+import Message from './components/Message';
+import Download from './components/Download';
+import BackgroundMusic from './components/BackgroundMusic'; // Import du composant de musique
 import './App.css';
+import Ballons from './components/Balloons';
 
-function App() {
+
+const App = () => {
+  const [step, setStep] = useState(0);
+
+  const nextStep = () => setStep((prev) => prev + 1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Composant de musique global */}
+      <BackgroundMusic />
+
+      {/* Étapes de l'application */}
+      {step === 0 && <Animation onCelebrate={nextStep} />}
+      {step === 1 && <Ballons onComplete={nextStep} />}
+      {step === 2 && <Message onNext={nextStep} />}
+      {step === 3 && <Download />}
     </div>
   );
-}
+};
 
 export default App;
