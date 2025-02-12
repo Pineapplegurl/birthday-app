@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Confetti from 'react-confetti';
 
+
 const Animation = ({ onCelebrate }) => {
   const audioRef = useRef(null);
 

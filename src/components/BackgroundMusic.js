@@ -1,15 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Muted par défaut
 
   const handleToggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted; 
+      audioRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
     }
   };
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.muted = true; 
+    }
+  }, []);
 
   return (
     <div className="music-button-container">
