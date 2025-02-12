@@ -6,7 +6,8 @@ const Message = ({ onNext }) => {
       <h2>Bonheur, joie, santé et beaucoup de moula !! </h2>
       <div className="images">
   <img src="/assets/Luku.JPG" alt="Luku au gala" className="luku-image" />
-  <p>P.S : I really like your vibe and your ass </p>
+  <p>P.S : I really like your vibe and your ass  </p>
+  <p>( je peux pas mieux faire comme déclarataion )</p>
 </div>
       <button className="next-button" onClick={onNext}>
         Moi aussi pineapple

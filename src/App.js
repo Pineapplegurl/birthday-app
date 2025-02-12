@@ -14,10 +14,7 @@ const App = () => {
 
   return (
     <div>
-      {/* Composant de musique global */}
       <BackgroundMusic />
-
-      {/* Étapes de l'application */}
       {step === 0 && <Animation onCelebrate={nextStep} />}
       {step === 1 && <Ballons onComplete={nextStep} />}
       {step === 2 && <Message onNext={nextStep} />}

@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #e6f7ff; /* Bleu pastel */
+  background-color: #e6f7ff;
   color: #333;
   height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e6f7ff; /* Bleu pastel */
+  background-color: #e6f7ff; 
 }
 
 /* Conteneur principal */
@@ -31,10 +31,10 @@ body {
 }
 
 .balloons {
-  display: flex; /* Arrange les ballons horizontalement */
-  justify-content: center; /* Centre les ballons horizontalement */
-  align-items: center; /* Aligne les ballons verticalement */
-  gap: 20px; /* Ajoute un espace entre les ballons */
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
 }
 
 .balloon {
@@ -66,7 +66,6 @@ body {
   }
 }
 
-/* Boutons */
 button {
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -90,7 +89,6 @@ button:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Image */
 .luku-image {
   max-width: 400px;
   height: auto;
@@ -101,10 +99,10 @@ button:active {
 }
 
 .balloons {
-  display: flex; /* Arrange les ballons horizontalement */
-  justify-content: center; /* Centre les ballons horizontalement */
-  align-items: center; /* Aligne les ballons verticalement */
-  gap: 20px; /* Ajoute un espace entre les ballons */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 20px; 
 }
 
 .balloon {
@@ -137,19 +135,18 @@ button:active {
   opacity: 0;
 }
 
-/* Conteneur du bouton de musique */
+
 .music-button-container {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 1000; /* Assure que le bouton est au-dessus de tout */
+  z-index: 1000;
 }
 
-/* Bouton de musique stylisé */
 .music-button {
   padding: 5px 10px;
   font-size: 1rem;
-  background-color: #ff9f68; /* Orange pastel */
+  background-color: #ff9f68; 
   color: white;
   border: none;
   border-radius: 50px;
@@ -159,8 +156,8 @@ button:active {
 }
 
 .music-button:hover {
-  background-color: #ff7643; /* Couleur légèrement plus foncée */
-  transform: scale(1.1); /* Légère élévation */
+  background-color: #ff7643; 
+  transform: scale(1.1);
 }
 
 .music-button:active {

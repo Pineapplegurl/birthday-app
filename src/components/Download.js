@@ -3,22 +3,21 @@ import confetti from 'canvas-confetti';
 
 const Download = () => {
   const handleConfetti = () => {
-    // Déclenche des confettis personnalisés
     confetti({
       particleCount: 150,
       spread: 100,
-      origin: { y: 0.6 }, // Point d'origine légèrement plus bas
-      colors: ['#ff9f68', '#ffc107', '#b3e5fc', '#ffccbc'], // Couleurs pastel personnalisées
-      shapes: ['circle', 'square'], // Formes des confettis
+      origin: { y: 0.6 }, 
+      colors: ['#ff9f68', '#ffc107', '#b3e5fc', '#ffccbc'], 
+      shapes: ['circle', 'square'], 
     });
   };
 
   return (
     <div className="download-container">
-      <a href="/assets/cadeau.pdf" download>
+      <a href="/assets/Pineapple's gift.pdf" download>
         <button
           className="download-button"
-          onClick={handleConfetti} // Déclenche les confettis au clic
+          onClick={handleConfetti} 
         >
           Pineapple's gift
         </button>
