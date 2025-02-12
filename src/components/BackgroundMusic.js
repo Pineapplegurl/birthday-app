@@ -6,14 +6,24 @@ const BackgroundMusic = () => {
 
   const handleToggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
+      if (isMuted) {
+        // Désactive le mode mute et joue la musique
+        audioRef.current.muted = false;
+        audioRef.current.play().catch((err) => {
+          console.error("Erreur lors de la lecture de l'audio :", err);
+        });
+      } else {
+        // Active le mode mute
+        audioRef.current.muted = true;
+      }
       setIsMuted(!isMuted);
     }
   };
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.muted = true; 
+      // Met la musique en sourdine par défaut
+      audioRef.current.muted = true;
     }
   }, []);
 
